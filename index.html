@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Light Filed VR View</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no,
+      minimum-scale=1.0, maximum-scale=1.0">
+    <style>
+      body {
+        margin: 0px;
+        overflow: hidden;
+      }
+      #lfvrview {
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: #888888;
+      }
+      .overlay {
+        position: absolute;
+        top: 10; left: 10; right: 10; bottom: 10;
+        z-index: 10;
+        color: white; font-family: monospace;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="lfvrview"></div>
+
+    <div class="overlay">
+      Camera pos: <span id="posx">na</span>,
+                  <span id="posy">na</span>,
+                  <span id="posz">na</span><br>
+      Camera rot: <span id="rotx">na</span>,
+                  <span id="roty">na</span>
+                  <span id="rotz">na</span><br>
+      LF tile:    <span id="tl_n">na</span>,
+                  <span id="tl_m">na</span><br>
+      Texture number:
+                  <span id="tl_k">na</span><br>
+    </div>
+
+    <script src="js/third-party/NoSleep.js"></script>
+
+    <script src="js/third-party/threejs/three.js"></script>
+    <script src="js/third-party/threejs/StereoEffect.js"></script>
+    <script src="js/third-party/threejs/DeviceOrientationControls.js"></script>
+    <script src="js/third-party/threejs/OrbitControls.js"></script>
+
+    <script src="js/MenuVR.js"></script>
+    <script src="js/TestSession.js"></script>
+    <script src="js/LightFieldVR.js"></script>
+    <script src="js/main.js"></script>
+
+  </body>
+</html>
