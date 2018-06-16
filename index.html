@@ -1,25 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Light Field VR Demo</title>
+  <title>A Rendering Solution to Display Light Field in Virtual Reality</title>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    p {
-        font-size: 18px;
-      }
-  </style>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    body {
+        overflow-x: hidden;  /*Prevent scroll on narrow devices */
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    }
+    h2 {
+      font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+      font-size: 48px;
+    }
+    p {
+        font-size: 18px;
+      }
+    .authors {
+        font-family: Helvetica,Arial,sans-serif;
+        font-size: 100px;
+      }
+    .bibtexsection {
+        font-family: "Courier",monospace;
+        font-size:12px;
+        width: 60em;
+        max-width: 80%;
+        white-space: pre;
+        background-color: #f4f4f4;
+      }
+  </style>
 </head>
 <body>
 
 <div class="container">
-  <br><br>
+
   <div class="jumbotron">
-    <h1>A Rendering Solution to Display Light Field in Virtual Reality</h1>
-    <p class="text-center"><strong>Evgeniy Upenik, Irene Viola and Touradj Ebrahimi</strong></p>
+    <h2>
+      A Rendering Solution to Display Light Field in Virtual Reality
+    </h2>
+    <p class="authors"> <a href="https://people.epfl.ch/evgeniy.upenik?lang=en">
+                              Evgeniy Upenik</a>,
+                            <a href="https://people.epfl.ch/irene.viola?lang=en">
+                              Irene Viola</a> and
+                            <a href="https://people.epfl.ch/touradj.ebrahimi?lang=en">
+                              Touradj Ebrahimi</a>
+    </p>
     <!-- <p class="text-center">Multimedia Signal Processing Group<br>
       Ecole Polytechnique Fédérale de Lausanne<br>
       Lausanne, Switzerland<br>
@@ -31,22 +62,45 @@
       <a class="btn btn-primary" href="https://github.com/mmspg/lightfieldvrtb">Source Code</a>
       <a class="btn btn-primary" href="https://github.com/mmspg/lightfieldvrtb/tree/master/data_analysis/rawdata">Pilot Experiment Data</a>
       <a class="btn btn-primary" href="https://github.com/mmspg/lightfieldvrtb/blob/master/data_analysis/analyse_results.ipynb">Data Analysis Scripts</a>
+      <a class="btn btn-primary" href="https://infoscience.epfl.ch/record/255682?ln=en">Paper (preprint)</a>
+    </p>
+    <br>
+    <p style="font-size:14px; font-family: Helvetica;width:25%;text-align:justify;">
+      <strong>Demo Instructions</strong><br>
+      Press <kbd>space</kbd> to go to the next image and vote.
+      Use mouse to interact.
+      Google Cardboard compatible HMDs are supported.
     </p>
   </div>
-  <p>DEMO instructions:<br>
-    Press <kbd>space</kbd> to go to the next image and vote.<br>
-    Use mouse to interact.<br>
-    Google Cardboard compatible HMDs are supported.
-  </p>
+
   <br>
   <center>
-  <p style="width:80%;text-align:justify;"><strong>Abstract:</strong> There is a need for affordable and easily deployable rendering and display solutions to take full advantage of light field imaging.
-    In particular, the research community needs ways to better assess the impact of various light field imaging technologies based on different criteria.
-    In this paper, we propose a solution to render light field images on head mounted virtual reality displays using off-shelf components.
-    The proposed framework is based on WebGL and supports rendering of narrow baseline light field images with interactions that result in changes of perspective.
-    The system can be used in subjective quality assessments of light field via crowdsourcing. It also allows tracking and recoding of viewing interactions.
+  <p style="width:80%;text-align:justify;"><strong>Abstract:</strong>
+    There is a need for affordable and easily deployable rendering and display
+    solutions to take full advantage of light field imaging.
+    In particular, the research community needs ways to better assess the impact
+    of various light field imaging technologies based on different criteria.
+    In this paper, we propose a solution to render light field images on head
+    mounted virtual reality displays using off-the-shelf components.
+    The proposed framework is based on WebGL and supports rendering of narrow
+    baseline light field images with interactions that result in changes of
+    perspective.
+    The system can be used in subjective quality assessments of light field via
+    crowd-sourcing. It also allows for tracking and recording of viewing
+    interactions.
   </p>
   </center>
+  <br><br><br>
+  <div class="bibtexsection">
+    @inproceedings{upenik_rendering_2018,
+       title = {A {Rendering} {Solution} to {Display} {Light} {Field} in {Virtual} {Reality}},
+       author = {Upenik, Evgeniy and Viola, Irene and Ebrahimi, Touradj},
+       booktitle = {26th {E}uropean {S}ignal {P}rocessing {C}onference {EUSIPCO}},
+       month = {September},
+       year = {2018},
+      }
+    </div>
+
 </div>
 
 </body>
